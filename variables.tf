@@ -25,3 +25,8 @@ variable "spoke_address_space" {
   description = "The address space for the spoke virtual network."
   type        = string
 }
+
+variable "spoke_name" {
+  description = "The name of the spoke."
+  type        = string
+}
