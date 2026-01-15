@@ -9,3 +9,10 @@ resource "azurerm_subnet" "spoke_a_subnets" {
   virtual_network_name = data.tfe_outputs.hub.values.hub_virtual_network
   address_prefixes     = [var.spoke_address_space]
 }
+
+resource "tfe_workspace" "new_spoke_ws" {
+  name         = var.spoke_ws_name
+  organization = var.tf_org_name
+  project_id   = data.tfe_outputs.hub.values.project_id
+  description  = "Spoke workspace created from module"
+}

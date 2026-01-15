@@ -15,6 +15,12 @@ variable "hub_workspace_name" {
   default     = "azure-hub-workspace"
 }
 
+variable "spoke_ws_name" {
+  description = "The name of the Spoke Terraform Cloud/Enterprise workspace."
+  type        = string
+  default     = "new-spoke-workspace"
+}
+
 variable "tf_org_name" {
   description = "The name of the Terraform Cloud/Enterprise organization."
   type        = string
